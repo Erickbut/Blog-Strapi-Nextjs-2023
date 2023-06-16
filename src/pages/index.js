@@ -3,6 +3,7 @@ import Post from './Post';
 import axios from 'axios';
 
 const Home = ({ posts }) => {
+  console.log(posts);
   return (
     <div>
       <h1>Blog</h1>
