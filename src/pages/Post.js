@@ -2,7 +2,13 @@ import React from 'react';
 import styles from '@/styles/Post.module.css';
 
 const Post = ({ post }) => {
-    const { Title, Content, Author } = post.attributes || {}; // Añadimos un objeto vacío como valor por defecto
+    const { attributes } = post || {}; // Añadimos un objeto vacío como valor por defecto
+
+    if (!attributes) {
+        return null; // Si no hay atributos, no se renderiza nada
+    }
+
+    const { Title, Content, Author } = attributes;
 
     return (
         <div>
