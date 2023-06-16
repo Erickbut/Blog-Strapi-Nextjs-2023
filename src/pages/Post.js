@@ -11,7 +11,7 @@ const Post = ({ post }) => {
     const { Title, Content, Author } = attributes;
 
     return (
-        <div>
+        <div className={styles.post}>
             <h2>{Title}</h2>
             <p>{Content}</p>
             <p>Author: {Author}</p>
