@@ -16,7 +16,7 @@ const Home = ({ posts }) => {
 export async function getStaticProps() {
   try {
     const response = await axios.get('http://localhost:1337/api/posts');
-    const { data } = response.data.data;
+    const { data } = response.data;
 
     return {
       props: {
